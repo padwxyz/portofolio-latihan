@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #F1ECE8;
+    color: #131216;
+}
+
+/* NAVBAR */
+#home{
+    width: 100%;
+    height: 100vh;
+}
+
+.home{
+    padding: 10px 10%;
+}
+
+.logo{
+    font-size: 20px;
+}
+
+.logo h1{
+    font-weight: 1000;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #131216;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #131216;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* HOME PAGE */
+.home-col-1{
+    margin-top: 20%;
+    font-size: 20px;
+}
+
+.home-col-1 h3{
+    font-size: 30px;
+}
+
+.home-col-1 h1{
+    font-size: 70px;
+    margin-top: 10px;
+}
+
+.btn-home{
+    margin-top: 20px;
+    background-color: purple;
+    color:#131216;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-home:hover{
+    background:#39FF14;
+    transform: translateY(-10px);
+}
+
+.home-col-2{
+    margin-top: 100px;
+    flex-basis: 35%;
+}
+
+.home-col-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ABOUT */
+#about{
+    padding: 80px 0;
+    background-color: #131216;
+    color:#F1ECE8;
+    border-radius: 60px 60px 0 0;
+}
+
+.about{
+    padding: 10px 10%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    font-size: 20px;
+}
+
+.about-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #F1ECE8;
+}
+
+.btn-cv{
+    background-color: purple;
+    color:#131216;
+    width: 200px;
+    height: 70px;
+    border-radius: 15px;
+    border: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-cv:hover{
+    background:#39FF14;
+    transform: translateY(-10px);
+}
+
+.btn {
+    color:#F1ECE8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* SKILLS */
+.skills{
+    width: 100%;
+    height: 100vh;
+    background-color: #131216;
+    color: #F1ECE8;
+    border-radius: 0 0 60px 60px;
+}
+
+.skills-title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    padding-top: 150px;
+}
+
+.skills-list{
+    display: flex;
+    gap: 32px;
+    align-items: baseline;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 50px 90px;
+}
+
+.skills-list div{
+    color: #F1ECE8;
+    background-color: #1E1E1E;
+    padding: 40PX;
+    font-size: 16PX;
+    font-weight: 300;
+    border-right: 10PX;
+    border-radius: 20PX;
+    height: 120%;
+    width: 80%;
+    transition: background 0.3s, transform 0.5s;
+}
+
+.skills-list div:hover{
+    background: #39FF14;
+    transform: translateY(-10px);
+}
+
+.skills-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: baseline;
+}
+
+/* PORTOFOLIO */
+#portofolio{
+    padding: 50px 0;
+}
+
+.porto-title{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: #131216;
+}
+
+.porto-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.porto{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    color: #F1ECE8;
+}
+
+.porto img{
+    width: 100%; 
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgb(0, 0, 0, 0.6), purple);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #131216;
+    text-decoration: none;
+    font-size: 18px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.porto:hover img{
+    transform: scale(1.1);
+}
+
+.porto:hover .layer{
+    height: 100%;
+}
+
+/* CONTACT */
+.contact{
+    background-color: #131216;
+    color: #F1ECE8;
+    padding: 50px 10%;
+}
+
+.contact-left{
+    flex-basis: 35%;
+    margin-right: 260px;
+}
+
+.contact-paragraf{
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.contact-left p i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.contact-title{
+    margin-top: 30px;
+    text-align: left;
+}
+
+.sosmed{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.sosmed a{
+    text-decoration: none;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-right: 15px;
+    color: #F1ECE8;
+    display: inline-block;
+    transition: o.5s;
+}
+
+.sosmed a:hover{
+    color: #39FF14;
+    transform: translateY(-5px);
+}
+
+.contact-footer{
+    text-align: center;
+    font-weight: 700;
+}
